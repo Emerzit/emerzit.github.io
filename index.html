@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="MailGuard, passerelle personnelle permettant à des agents IA autorisés de consulter Gmail en lecture seule.">
+  <title>MailGuard — Gmail en lecture seule pour agents IA</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header><a class="brand" href="index.html">MailGuard</a><nav aria-label="Navigation"><a href="privacy.html">Confidentialité</a><a href="terms.html">Conditions</a></nav></header>
+  <main>
+    <p class="eyebrow">Projet personnel · lecture seule</p>
+    <h1>Consulter Gmail avec des agents IA autorisés.</h1>
+    <p class="lead">MailGuard est une passerelle personnelle entre une boîte Gmail et des agents d’intelligence artificielle compatibles avec le protocole MCP. Son objectif est de permettre la recherche et l’analyse des e-mails en limitant l’autorisation Google à la lecture seule.</p>
+    <section aria-labelledby="purpose">
+      <h2 id="purpose">Fonctionnement</h2>
+      <p>Le propriétaire autorise MailGuard via Google OAuth, puis remet un jeton MailGuard distinct à chaque client IA qu’il choisit. Ces clients peuvent rechercher des messages, consulter des messages et conversations, lire les libellés et récupérer certaines pièces jointes avec des limites de taille et de format.</p>
+      <p>MailGuard utilise exclusivement le scope <code>https://www.googleapis.com/auth/gmail.readonly</code>. Il ne propose aucune fonction d’envoi, de suppression, de marquage lu/non lu, de modification de libellé ou de gestion des brouillons. Le mot de passe Gmail n’est jamais demandé par MailGuard.</p>
+    </section>
+    <section aria-labelledby="privacy">
+      <h2 id="privacy">Un accès choisi, des limites explicites</h2>
+      <p>Les identifiants Google restent dans l’environnement d’administration et du serveur ; ils ne sont pas remis aux clients MCP. Les informations renvoyées par MailGuard sont en revanche accessibles aux agents autorisés et peuvent être traitées par leurs fournisseurs IA. Le propriétaire doit vérifier leurs paramètres, leurs conditions de conservation et leurs règles d’utilisation des données avant de les connecter.</p>
+      <p>Les e-mails sont des données non fiables. MailGuard n’exécute pas leur contenu, mais ne peut garantir le comportement d’un agent disposant d’autres outils ou permissions.</p>
+      <p><a class="primary" href="privacy.html">Lire les règles de confidentialité</a></p>
+    </section>
+    <section aria-labelledby="status">
+      <h2 id="status">Usage personnel et état du projet</h2>
+      <p>MailGuard est développé pour l’usage personnel de son propriétaire. Cette page informe sur le projet ; elle n’offre ni connexion à Gmail ni inscription à un service public. La configuration Google et la mise en service sont en cours. Une disponibilité permanente n’est pas garantie.</p>
+      <p>Mainteneur : <a href="https://github.com/Emerzit">Emerzit sur GitHub</a>. L’adresse d’assistance OAuth est affichée par Google dans le parcours de consentement.</p>
+    </section>
+  </main>
+  <footer><p>MailGuard · Projet indépendant, non affilié à Google.</p><a href="privacy.html">Confidentialité</a> · <a href="terms.html">Conditions d’utilisation</a></footer>
+</body>
+</html>
